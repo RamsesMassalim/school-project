@@ -1,12 +1,11 @@
 <ol>
 <li>
-# School project
+School project
 This project is a simple Java Spring Boot application to store, add and delete users.
 </li>
 
----
 <li>
-# Functionality And Approach Taken:
+Functionality And Approach Taken:
 This project uses Postgresql and consists of database named “school” which has only one table named: “users”.  The user table consist of following columns: 1)id 2)userName 3)firstName 4)lastName 5)dateOfBirth 6)password.
 MyBatis is used to communicate with database. In java project the database structure is present in “entity” folder.
 BookStore  supports following functionality:
@@ -19,9 +18,8 @@ BookStore  supports following functionality:
 </ol>
 </li>
 
----
 <li>
-# Tools/Framework
+Tools/Framework
 <ol>
 <li>Postgresql: Postgresql is a open-source relational database management system.</li>
 <li>MyBatis: MyBatis is a Java persistence framework that couples objects with stored procedures or SQL statements using an XML descriptor or annotations.</li>
@@ -29,11 +27,10 @@ BookStore  supports following functionality:
 <li>ModelMapper: ModelMapper is a simple, intelligent, object mapping tool. It is used to map the object in this project.</li>
 <li>Liquibase: Liquibase is an open-source database-independent library for tracking, managing and applying database schema changes.</li>
 </ol>
-
 </li>
----
+
 <li>
-# Steps To Run The Application
+Steps To Run The Application
 <ol>
 <li>This project uses Lombok. So, if you do not have Lombok plugins inserted into your IDE, please install it into your IDD.</li>
 <li>Install Postgresql in your laptop if you do not have one.</li>
