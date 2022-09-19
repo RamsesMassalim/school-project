@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+    <changeSet id="1" author="ramses">
+        <sql>
+            create table if not exists users (
+                id serial,
+                userName varchar not null,
+                firstName varchar not null,
+                lastName varchar not null,
+                dateOfBirth date not null,
+                password varchar not null,
+                primary key(id),
+                constraint unique_user_name unique (userName)
+            );
+
+            SET datestyle = dmy;
+
+            insert into users (userName, firstName, lastName, dateOfBirth, password)
+            values ('user1', 'Ann', 'Hat', '15-05-1976', 'loveandpiece76!'),
+                   ('user2', 'Garry', 'Larry', '11-01-1982', 'debby15@'),
+                   ('user3', 'Bob', 'Tod', '01-11-1999', 'power!23')
+        </sql>
+    </changeSet>
+</databaseChangeLog>
